@@ -13,7 +13,7 @@ usage:
 	@printf "${YELLOW}make build               ${GREEN}# Build centos docker image ${NC}\n"
 	@printf "${YELLOW}make test                ${GREEN}# Test centos docker image ${NC}\n"
 	@printf "${YELLOW}make release             ${GREEN}# Release centos docker image ${NC}\n"
-	@printf "${YELLOW}make bash	               ${GREEN}# Run the centos docker and return a bash prompt on the continer${NC}\n"
+	@printf "${YELLOW}make bash	               ${GREEN}# Run the centos docker and return a bash prompt on the container${NC}\n"
 
 clean:
 	@printf "Killing the running docker container: test-docker-build \n"
