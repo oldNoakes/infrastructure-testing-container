@@ -1,0 +1,16 @@
+---
+command:
+  su -l vagrant -c 'sudo cat /etc/sudoers':
+    title: verify sudo is working and vagrant user has been added
+    exit-status: 0
+
+service:
+  sshd:
+    enabled: true
+    running: true
+
+file:
+  /home/vagrant/.ssh:
+    exists: true
+    owner: vagrant
+    filetype: directory
