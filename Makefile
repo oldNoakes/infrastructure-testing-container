@@ -6,7 +6,7 @@ YELLOW := \033[1;33m
 NC     := \033[0m # No Color
 
 OWNER=oldnoakes
-IMAGE_NAME=infratest/centos
+IMAGE_NAME=infratest-centos
 BASE_NAME=$(OWNER)/$(IMAGE_NAME)
 
 COMMIT ?= fake
