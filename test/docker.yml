@@ -3,6 +3,11 @@ command:
   su -l vagrant -c 'sudo cat /etc/sudoers':
     title: verify sudo is working and vagrant user has been added
     exit-status: 0
+  su -l vagrant -c 'pip --version':
+    title: verify pip is installed and available to non-root user
+    exit-status: 0
+    stdout:
+      - /^pip/
 
 service:
   sshd:
