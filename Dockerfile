@@ -60,10 +60,3 @@ RUN sed -i 's/^#\s*\(%wheel\s*ALL=(ALL)\s*NOPASSWD:\s*ALL\)/\1/' /etc/sudoers
 EXPOSE 22
 RUN systemctl enable sshd.service
 CMD ["/usr/sbin/init"]
-
-# # Files required by the Jenkins service
-# COPY init.d/functions /etc/init.d/functions
-# COPY profile.d/lang.sh /etc/profile.d/lang.sh
-
-# Called by /etc/init.d/functions
-# COPY sbin/consoletype /sbin/consoletype
