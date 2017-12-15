@@ -7,19 +7,17 @@ NC     := \033[0m # No Color
 
 BASE_NAME = oldnoakes/infratest/centos
 
-.PHONY: all build test tag_latest release
+.PHONY: clean build run test bash
+.DEFAULT_GOAL := usage
 
 usage:
 	@printf "${YELLOW}make build               ${GREEN}# Build centos docker image ${NC}\n"
 	@printf "${YELLOW}make test                ${GREEN}# Test centos docker image ${NC}\n"
-	@printf "${YELLOW}make release             ${GREEN}# Release centos docker image ${NC}\n"
 	@printf "${YELLOW}make bash                ${GREEN}# Run the centos docker and return a bash prompt on the container${NC}\n"
 
 clean:
 	@printf "Killing the running docker container: test-docker-build \n"
 	@-docker kill test-docker-build
-
-all: build
 
 build: clean
 	docker build -t $(BASE_NAME) --rm -f Dockerfile .
