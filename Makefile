@@ -19,9 +19,6 @@ LATEST_TAG=$(BASE_NAME):latest
 .PHONY: clean build run test bash
 .DEFAULT_GOAL := usage
 
-test-defaults:
-	@echo "Var is: ${VARIABLE} it is"
-
 usage:
 	@printf "${YELLOW}make build               ${GREEN}# Build centos docker image ${NC}\n"
 	@printf "${YELLOW}make test                ${GREEN}# Test centos docker image ${NC}\n"
